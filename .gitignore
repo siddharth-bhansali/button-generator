@@ -1,0 +1,5 @@
+## IDE Specific
+.idea/
+
+# SASS
+style.scss

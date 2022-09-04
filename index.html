@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="rules">
+        <div class="heading">
+            <div class="main">Rules</div>
+            <div class="helper">All values are in px</div>
+        </div>
+        <div class="form-field">
+            <label for="button-label" class="form-label">Label</label>
+            <input type="text" name="label" id="button-label" placeholder="Label" aria-label="Label" value="Button"
+                   class="form-input form-input-text">
+        </div>
+        <div class="form-field">
+            <label for="button-bg-color" class="form-label">Background Color</label>
+            <input type="color" name="bg-color" id="button-bg-color" placeholder="Background Color"
+                   aria-label="Background Color" value="#02a9f7" class="form-input form-input-color">
+        </div>
+        <div class="form-field">
+            <label for="button-font-color" class="form-label">Font Color</label>
+            <input type="color" name="font-color" id="button-font-color" placeholder="Font Color"
+                   aria-label="Font Color" value="#d4f0fc" class="form-input form-input-color">
+        </div>
+        <div class="form-field">
+            <label for="button-font-size" class="form-label">Font Size</label>
+            <input type="number" name="font-size" id="button-font-size" placeholder="Font Size"
+                   aria-label="Font Size" value="16" class="form-input form-input-number">
+        </div>
+        <div class="form-field">
+            <label for="button-padding" class="form-label">Padding</label>
+            <input type="range" name="padding" id="button-padding" min="1" max="160" aria-label="Button Padding"
+                   value="10" class="form-input form-input-range">
+            <div class="collapse-button" id="padding-collapse-button">
+                <button class="individual-controls" id="padding-individual-controls">Individual Controls</button>
+            </div>
+        </div>
+        <div class="form-group collapse-group" id="padding-collapse-group">
+            <div class="form-field">
+                <label for="button-padding-top" class="form-label">Padding Top</label>
+                <input type="range" name="padding-top" id="button-padding-top" min="1" max="160"
+                       aria-label="Button Padding Top" value="10" class="form-input form-input-range">
+            </div>
+            <div class="form-field">
+                <label for="button-padding-right" class="form-label">Padding Right</label>
+                <input type="range" name="padding-right" id="button-padding-right" min="1" max="160"
+                       aria-label="Button Padding Right" value="10" class="form-input form-input-range">
+            </div>
+            <div class="form-field">
+                <label for="button-padding-bottom" class="form-label">Padding Bottom</label>
+                <input type="range" name="padding-bottom" id="button-padding-bottom" min="1" max="160"
+                       aria-label="Button Padding Bottom" value="10" class="form-input form-input-range">
+            </div>
+            <div class="form-field">
+                <label for="button-padding-left" class="form-label">Padding Left</label>
+                <input type="range" name="padding-left" id="button-padding-left" min="1" max="160"
+                       aria-label="Button Padding Left" value="10" class="form-input form-input-range">
+            </div>
+        </div>
+        <div class="form-field">
+            <label for="button-border-radius" class="form-label">Border Radius</label>
+            <input type="range" name="border-radius" id="button-border-radius" min="1" max="999"
+                   aria-label="Button Border Radius" value="16" class="form-input form-input-range">
+        </div>
+        <div class="form-field">
+            <label for="button-border-color" class="form-label">Border Color</label>
+            <input type="color" name="border-color" id="button-border-color" placeholder="Border Color"
+                   aria-label="Border Color" value="#02577a" class="form-input form-input-color">
+        </div>
+        <div class="form-field">
+            <label for="button-border-width" class="form-label">Border Width</label>
+            <input type="range" name="border-width" id="button-border-width" min="1" max="999"
+                   aria-label="Button Border Width" value="2" class="form-input form-input-range">
+        </div>
+        <div class="form-field">
+            <label for="button-border-style" class="form-label">Border Style</label>
+            <select name="border-style" id="button-border-style" aria-label="Button Border Style"
+                    class="form-input form-input-select">
+                <option value="dashed">Dashed</option>
+                <option value="dotted">Dotted</option>
+                <option value="double">Double</option>
+                <option value="groove">Groove</option>
+                <option value="hidden">Hidden</option>
+                <option value="inset">Inset</option>
+                <option value="none">None</option>
+                <option value="outset">Outset</option>
+                <option value="ridge">Ridge</option>
+                <option value="solid" selected>Solid</option>
+            </select>
+        </div>
+    </div>
+    <div class="output">
+        <button id="button" class="button"></button>
+        <code class="copy-rules" id="copy-rules">
+            <span class="copy-successful-popup" id="copy-successful-popup">Copied!</span>
+            <button class="copy-code" id="copy-code">
+                <img src="public/copy-to-clipboard.svg" alt="Copy Code" class="copy-code-image">
+            </button>
+            <span class="rules-code" id="rules-code"></span>
+        </code>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
